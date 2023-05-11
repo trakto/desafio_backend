@@ -6,8 +6,9 @@ Desenvolver uma API Rest com um único end-point utilizando o framework NestJS e
 
 ## Descrição do recurso
 
-O end-point deve receber uma url pública de uma imagem JPG, deve salvar essa imagem no sistema de arquivos e gerar uma versão reduzida da imagem, que deve ter sua maior dimensão com 720px e a dimensão menor proporcional. A imagem reduzida deve ter compactação e o fator deve ser enviado como parâmentro junto com a url da imagem original.
-O serviço deve também registrar numa instância do mongodb, todos os metadados contidos no exif da imagem.
+O end-point deve receber uma url pública de uma imagem JPG, deve salvar essa imagem no sistema de arquivos e gerar uma versão reduzida da imagem (acrescentando o sufixo \_thumb ao nome do arquivo), que deve ter sua maior dimensão com 720px e a dimensão menor proporcional. Caso a maior dimensão seja inferior a 720px, apenas uma cópia da imagem original deve ser feita com o sufixo no nome do arquivo. 
+A imagem reduzida deve ter compactação e o fator deve ser enviado como parâmentro junto com a url da imagem original.
+O serviço deve também registrar numa instância do mongodb, todos os metadados contidos no exif da imagem da imagem original.
 
 ## Modelo de requisição
 
